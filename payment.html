@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - CampusCupid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cupid-pink': '#ff69b4',
+                        'cupid-purple': '#8b5cf6',
+                        'cupid-light-pink': '#fce7f3',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-cupid-light-pink to-purple-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-cupid-pink">CampusCupid ❤️</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-cupid-pink transition-colors">Home</a>
+                    <a href="register.html" class="text-gray-700 hover:text-cupid-pink transition-colors">Register</a>
+                    <a href="#" class="text-cupid-pink font-semibold">Payment</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Complete Your Payment</h1>
+                <p class="text-xl text-gray-600">Secure your spot on CampusCupid</p>
+                <div class="mt-4">
+                    <span class="text-3xl">💳</span>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Payment Information -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-cupid-purple mb-6 text-center">Payment Details</h2>
+                    
+                    <!-- UPI QR Code -->
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-4 bg-gray-100 rounded-lg">
+                            <!-- Placeholder QR Code - Replace with actual QR code image -->
+                            <div class="w-48 h-48 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <div class="text-center">
+                                    <div class="text-4xl mb-2">📱</div>
+                                    <p class="text-sm text-gray-600">QR Code</p>
+                                    <p class="text-xs text-gray-500">Scan to Pay</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI ID -->
+                    <div class="bg-cupid-light-pink p-4 rounded-lg mb-6">
+                        <h3 class="font-semibold text-center mb-2">UPI ID</h3>
+                        <div class="flex items-center justify-center space-x-2">
+                            <code class="bg-white px-3 py-2 rounded text-lg font-mono">campuscupid@upi</code>
+                            <button onclick="copyUPIID()" class="bg-cupid-pink text-white px-3 py-2 rounded hover:bg-pink-600 transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="bg-purple-100 p-4 rounded-lg mb-6 text-center">
+                        <h3 class="font-semibold mb-2">Amount</h3>
+                        <div class="text-3xl font-bold text-cupid-purple">₹499</div>
+                        <p class="text-sm text-gray-600 mt-1">One-time registration fee</p>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-cupid-purple mb-6">Payment Instructions</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Scan QR Code or Use UPI ID</h3>
+                                <p class="text-gray-600 text-sm">Open any UPI app (GPay, PhonePe, Paytm, etc.) and scan the QR code or enter the UPI ID manually.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Complete Payment</h3>
+                                <p class="text-gray-600 text-sm">Pay exactly ₹499 and complete the transaction. Make sure the payment is successful.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Take Screenshot</h3>
+                                <p class="text-gray-600 text-sm">Take a screenshot of the successful payment confirmation page from your UPI app.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Upload in Registration Form</h3>
+                                <p class="text-gray-600 text-sm">Go back to the registration form and upload your payment screenshot in the designated field.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Important Notes -->
+                    <div class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                        <h3 class="font-semibold text-yellow-800 mb-2">Important Notes:</h3>
+                        <ul class="text-sm text-yellow-700 space-y-1">
+                            <li>• Payment screenshot is mandatory for profile approval</li>
+                            <li>• Processing may take 24-48 hours after form submission</li>
+                            <li>• Refunds available only if service is not provided</li>
+                            <li>• Keep your transaction ID for future reference</li>
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col space-y-4 mt-8">
+                        <a href="register.html" 
+                           class="bg-gradient-to-r from-cupid-pink to-cupid-purple text-white px-6 py-3 rounded-full text-center font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Back to Registration Form
+                        </a>
+                        
+                        <a href="thankyou.html" 
+                           class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full text-center font-semibold hover:bg-gray-300 transition-colors">
+                            Already Completed? Continue →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-cupid-purple mb-4 text-center">Need Support?</h2>
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl mb-2">💬</div>
+                        <h3 class="font-semibold">Chat Support</h3>
+                        <p class="text-sm text-gray-600">Available 9 AM - 9 PM</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-2">📧</div>
+                        <h3 class="font-semibold">Email</h3>
+                        <p class="text-sm text-gray-600">support@campuscupid.com</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-2">📞</div>
+                        <h3 class="font-semibold">Phone</h3>
+                        <p class="text-sm text-gray-600">+91 XXXXX XXXXX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
