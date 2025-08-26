@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - CampusCupid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cupid-pink': '#ff69b4',
+                        'cupid-purple': '#8b5cf6',
+                        'cupid-light-pink': '#fce7f3',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-cupid-light-pink to-purple-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-cupid-pink">CampusCupid ❤️</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-cupid-pink transition-colors">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Success Animation -->
+            <div class="mb-8">
+                <div class="inline-block p-8 bg-white rounded-full shadow-lg animate-pulse">
+                    <span class="text-8xl">💖</span>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                Thank You!
+            </h1>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl md:text-3xl font-semibold text-cupid-purple mb-4">
+                    Welcome to CampusCupid! 🎉
+                </h2>
+                
+                <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                    Your profile has been submitted successfully! Our team will review your information 
+                    and match you with compatible students on your campus.
+                </p>
+
+                <!-- Status Cards -->
+                <div class="grid md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <div class="text-2xl mb-2">✅</div>
+                        <h3 class="font-semibold text-green-800">Profile Submitted</h3>
+                        <p class="text-sm text-green-600">Your information is safely stored</p>
+                    </div>
+                    
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <div class="text-2xl mb-2">⏳</div>
+                        <h3 class="font-semibold text-yellow-800">Under Review</h3>
+                        <p class="text-sm text-yellow-600">We're processing your profile</p>
+                    </div>
+                    
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <div class="text-2xl mb-2">💌</div>
+                        <h3 class="font-semibold text-blue-800">Matches Coming</h3>
+                        <p class="text-sm text-blue-600">Soon you'll receive your matches</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Next -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-cupid-purple mb-6">What Happens Next?</h2>
+                
+                <div class="space-y-6 text-left max-w-2xl mx-auto">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Profile Verification (24-48 hours)</h3>
+                            <p class="text-gray-600 text-sm">We'll verify your college email and payment to activate your profile.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Smart Matching Process</h3>
+                            <p class="text-gray-600 text-sm">Our algorithm will find compatible matches based on your interests, branch, and preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Receive Your Matches</h3>
+                            <p class="text-gray-600 text-sm">We'll contact you via email/phone with your compatible matches within a week.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-cupid-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Start Connecting</h3>
+                            <p class="text-gray-600 text-sm">We'll facilitate introductions and help you connect with your matches safely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-cupid-purple mb-4">Stay Connected</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">📧</div>
+                        <h3 class="font-semibold mb-2">Check Your Email</h3>
+                        <p class="text-gray-600 text-sm">We'll send updates about your matches and profile status to your registered email.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">📱</div>
+                        <h3 class="font-semibold mb-2">Keep Your Phone Ready</h3>
+                        <p class="text-gray-600 text-sm">Our team may call you for verification or to share your match details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+                <a href="index.html" 
+                   class="bg-gradient-to-r from-cupid-pink to-cupid-purple text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 block md:inline-block">
+                    Back to Home
+                </a>
+                
+                <button onclick="shareSuccess()" 
+                        class="bg-white text-cupid-purple border-2 border-cupid-purple px-8 py-4 rounded-full text-lg font-semibold hover:bg-cupid-purple hover:text-white transition-all duration-300 block md:inline-block">
+                    Share with Friends 📤
+                </button>
+            </div>
+
+            <!-- Fun Message -->
+            <div class="mt-12 p-6 bg-gradient-to-r from-cupid-light-pink to-purple-100 rounded-lg">
+                <p class="text-lg text-gray-700 font-medium">
+                    "Love is in the air... and on campus! 💕"
+                </p>
+                <p class="text-sm text-gray-600 mt-2">
+                    Get ready to meet someone special who shares your campus and interests!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
