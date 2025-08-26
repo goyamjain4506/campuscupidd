@@ -2,7 +2,7 @@
 
 // Copy UPI ID to clipboard
 function copyUPIID() {
-    const upiId = 'campuscupid@upi';
+    const upiId = '9870403495@ibl';
     navigator.clipboard.writeText(upiId).then(function() {
         // Show success message
         showToast('UPI ID copied to clipboard!', 'success');
